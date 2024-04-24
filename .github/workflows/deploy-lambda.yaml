@@ -31,7 +31,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           audience: sts.amazonaws.com.cn
-          aws-region: us-east-3
+          aws-region: eu-central-1
           role-to-assume: arn:aws:iam::350678100212:role/Terraform
 
       - name: Setup Terraform

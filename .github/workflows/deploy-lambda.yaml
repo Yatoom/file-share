@@ -43,16 +43,16 @@ jobs:
           terraform_version: 1.1.0
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform -chdir=infra/ init
       
       - name: Terraform Validate
-        run: terraform validate
+        run: terraform -chdir=infra/ validate
       
       - name: Terraform Plan
-        run: terraform plan
+        run: terraform -chdir=infra/ plan
       
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: terraform -chdir=infra/ apply -auto-approve
 
       - name: Release lambda
         run: |
